@@ -1,0 +1,51 @@
+*{
+    font-family: 'Lexend', sans-serif;
+    color: white;
+}
+
+body{
+    background-color: #335C81;
+}
+
+.login-area{
+    background: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter: blur( 13.0px );
+    -webkit-backdrop-filter: blur( 13.0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    text-align: center;
+    margin: 5rem 35% 5rem 35%;
+    padding-bottom: 2rem;
+    height: 300px;
+    display: block;
+}
+
+h1{
+    border-bottom: solid 1px white;
+}
+
+.input-section{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.input-section input{
+    height: 2rem;
+    color: black;
+    font-size: 1rem;
+
+}
+
+.button-section{
+    margin: 2rem;
+}
+
+.button-section button{
+    color: black;
+    height: 3rem;
+    width: 6rem;
+    font-size: 1rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
+}
