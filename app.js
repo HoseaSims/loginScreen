@@ -1,14 +1,15 @@
 const loginArea = document.querySelector('.login-area')
 const registerButton = document.querySelector('#register-button')
-const username = document.querySelector('#username')
+
+
+const test = document.querySelector('#username')
 
 let registerTemplate = 
 `
-
         <h1>Registration</h1>
         <form action="">
             <div class="input-section">
-                <input id="username" type="text" placeholder="Username">
+                <input id="usernameTwo" type="text" placeholder="Username">
                 <input type="password" placeholder="Password">
                 <input type="password" placeholder="Confirm Password">
             </div>
@@ -16,32 +17,49 @@ let registerTemplate =
                 <button id="comeplete-button">Complete</button>
             </div>
         </form>
+`
+
+test.addEventListener('onchange', e =>{
+    e.preventDefault()
+    console.log(test.value);
+})
 
 
-`
-let completeRegistration = 
-`
-<h1>Welcome ${username}</h1>
-
-`
+let storeName
 
 
 registerButton.addEventListener('click', e =>{
     e.preventDefault()
-    console.log('test');
     loginArea.innerHTML = registerTemplate;
-
     const completeButton = document.querySelector('#comeplete-button')
+    
+    
+    
 
     completeButton.addEventListener('click', e =>{
         e.preventDefault()
-        console.log(username);
-        loginArea.innerHTML = completeRegistration
+        const username = document.querySelector('#usernameTwo')
+        console.log(storeName);
+        storeName = username.value
+        loginArea.innerHTML = 
+        `
+        <h1>Welcome ${storeName}</h1>
+        <p>Please Sign in.</p>
+        <form action="">
+            <div class="input-section">
+                <input id="usernameTwo" type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+            </div>
+            <div class="button-section">
+                <button id="comeplete-button">Sign in</button>
+            </div>
+        </form>
+
+        `
+        
     })
 })
 
-username.addEventListener('onChange', e =>{
-console.log('Hello');
-})
+
 
 
